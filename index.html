@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Gaurav &amp; Dnyaneshwari — Wedding Celebrations | 20 February 2027</title>
+  <meta name="description" content="Together with their families, Gaurav Jagtap and Dnyaneshwari Dhaktode warmly invite you to celebrate their wedding celebrations on 19–20 February 2027.">
+  <meta name="theme-color" content="#531D28">
+
+  <!-- Open Graph / Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="./">
+  <meta property="og:title" content="Gaurav &amp; Dnyaneshwari — Wedding Celebrations">
+  <meta property="og:description" content="A special invitation awaits! Join us in celebrating the wedding of Gaurav &amp; Dnyaneshwari at Shree Lawns, Amarapur, Shevgaon, Maharashtra.">
+  <meta property="og:image" content="assets1/opengraph-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="./">
+  <meta name="twitter:title" content="Gaurav &amp; Dnyaneshwari — Wedding Celebrations">
+  <meta name="twitter:description" content="A special invitation awaits! Join us in celebrating the wedding of Gaurav &amp; Dnyaneshwari at Shree Lawns, Amarapur, Shevgaon, Maharashtra.">
+  <meta name="twitter:image" content="assets1/opengraph-image.jpg">
+
+  <!-- Favicon & Touch Icons (Royal GD Monogram) -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets1/favicon-32x32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets1/favicon-16x16.png?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets1/apple-icon.png?v=2">
+  <link rel="shortcut icon" href="favicon.ico?v=2">
+
+  <!-- Google Fonts Preconnect & Luxury Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;600;700&family=Pinyon+Script&family=Rozha+One&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Multi-colored Floating Petals Canvas (Marigold, Jasmine, Rose) -->
+  <canvas id="petals-canvas" aria-hidden="true"></canvas>
+
+  <!-- Background Music Audio -->
+  <audio id="wedding-audio" loop preload="auto" playsinline src="assets1/vaaroon.m4a"></audio>
+
+  <!-- Fixed Viewport Framing Embellishments -->
+  <div class="fixed-scene-frame" aria-hidden="true">
+    <!-- Top-Left Hanging Brass Candle Lantern with White Jasmine Flowers -->
+    <div class="frame-decor lantern-decor">
+      <img src="assets1/image-d98rhd.jpg" alt="" class="decor-img lantern-img" onerror="this.style.display='none'">
+    </div>
+
+    <!-- Bottom Palace Balcony Balustrade Overlooking Misty Mountains -->
+    <div class="frame-decor balcony-decor">
+      <img src="assets1/image-17jqow.jpg" alt="" class="decor-img balcony-img" onerror="this.style.display='none'">
+    </div>
+
+    <!-- Ornate Double Border Framing -->
+    <div class="frame-outer-border"></div>
+  </div>
+
+  <!-- Sound Equalizer Pill Button (Fixed Bottom-Right, active after card opens) -->
+  <button id="music-toggle" class="music-equalizer-pill" aria-label="Toggle background music" title="Toggle Music">
+    <span class="equalizer-bars" aria-hidden="true">
+      <span class="bar bar-1"></span>
+      <span class="bar bar-2"></span>
+      <span class="bar bar-3"></span>
+      <span class="bar bar-4"></span>
+    </span>
+  </button>
+
+  <!-- Initial "Scroll to see more ∨" Pill Button (Fixed Bottom-Center) -->
+  <a href="#family-section" id="scroll-prompt-btn" class="scroll-prompt-pill" aria-label="Scroll to see more">
+    <span>Scroll to see more</span>
+    <span class="scroll-arrow" aria-hidden="true">∨</span>
+  </a>
+
+  <!-- Tap-To-Open Royal Envelope Overlay (3D Flap Unfolding) -->
+  <section id="envelope-overlay" class="envelope-overlay" aria-label="Wedding Envelope Invitation">
+    <div class="envelope-scene">
+      <div class="envelope-card-base">
+
+        <!-- Top Announcement Text -->
+        <p class="envelope-pretitle">A SPECIAL INVITATION AWAITS</p>
+        
+        <!-- Script Couple Names on Cover -->
+        <h2 class="envelope-couple-script">Gaurav <span class="script-amp">&amp;</span> Dnyaneshwari</h2>
+
+        <!-- Left & Right Gold Chameli Flowers -->
+        <div class="envelope-flower-left" aria-hidden="true"></div>
+        <div class="envelope-flower-right" aria-hidden="true"></div>
+
+        <!-- 3D Flipping Envelope Flap -->
+        <div id="envelope-flap" class="envelope-flap">
+          <div class="flap-face flap-outside">
+            <div class="flap-chameli-border"></div>
+            
+            <!-- Gold Wax Seal Button with Monogram "GD" -->
+            <button id="seal-button" class="seal-button" aria-label="Tap the seal to open wedding invitation">
+              <span class="seal-halo-glow" aria-hidden="true"></span>
+              <div class="wax-seal-badge">
+                <span class="seal-monogram-text">GD</span>
+              </div>
+            </button>
+          </div>
+          <div class="flap-face flap-inside"></div>
+        </div>
+
+        <!-- Prompt Pill Button: "👆 Tap the seal to open" -->
+        <div class="envelope-prompt-pill" id="seal-prompt-pill">
+          <span class="prompt-hand" aria-hidden="true">👆</span> Tap the seal to open
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Mobile-First Luxury Card Container (max-width 430px) -->
+  <main id="card-container" class="card-container" role="main">
+
+    <!-- Hero Section: Divine Shloka, Script "Wedding", & Couple Names -->
+    <header id="hero-section" class="hero-section reveal-on-scroll fade-up">
+      <!-- Sacred Ganesha Shloka -->
+      <p class="shloka-heading" lang="sa">॥ श्री गणेशाय नमः ॥</p>
+
+      <!-- Royal Typographic Title -->
+      <div class="invitation-title-group">
+        <p class="title-the">THE</p>
+        <h1 class="title-wedding-script">Wedding</h1>
+        <p class="title-celebrations">CELEBRATIONS</p>
+      </div>
+
+      <!-- Elegant Gold Diamond Divider -->
+      <div class="gold-diamond-divider" aria-hidden="true">
+        <span class="divider-line"></span>
+        <span class="divider-diamond">◆</span>
+        <span class="divider-line"></span>
+      </div>
+
+      <!-- Couple Names in Spaced Classic Serif -->
+      <div class="hero-couple-names">
+        <span class="name-hero groom">GAURAV</span>
+        <span class="name-hero-and">and</span>
+        <span class="name-hero bride">DNYANESHWARI</span>
+      </div>
+    </header>
+
+    <!-- Family Honors & Parental Blessings Section -->
+    <section id="family-section" class="family-section reveal-on-scroll fade-up">
+      <!-- Groom's Honor Card -->
+      <div class="family-person-card">
+        <h2 class="family-full-name">GAURAV JAGTAP</h2>
+        <p class="family-relation">Son of Mrs. Suvarna &amp; Mr. Kailas Jagtap</p>
+      </div>
+
+      <p class="family-connector-and">and</p>
+
+      <!-- Bride's Honor Card -->
+      <div class="family-person-card">
+        <h2 class="family-full-name">DNYANESHWARI DHAKTODE</h2>
+        <p class="family-relation">Daughter of Mrs. Sangita &amp; Mr. Tukaram Dhaktode</p>
+      </div>
+
+      <!-- Gold Diamond Divider -->
+      <div class="gold-diamond-divider" aria-hidden="true">
+        <span class="divider-line"></span>
+        <span class="divider-diamond">◆</span>
+        <span class="divider-line"></span>
+      </div>
+    </section>
+
+    <!-- Interactive Scratch-to-Reveal Date Card Section -->
+    <section id="scratch-section" class="scratch-section reveal-on-scroll zoom-in" aria-labelledby="scratch-title">
+      <p class="surprise-eyebrow">A LITTLE SURPRISE</p>
+      <h2 id="scratch-title" class="surprise-title">SAVE THE DATE</h2>
+      
+      <!-- Gold Diamond Divider -->
+      <div class="gold-diamond-divider" aria-hidden="true">
+        <span class="divider-line"></span>
+        <span class="divider-diamond">◆</span>
+        <span class="divider-line"></span>
+      </div>
+
+      <!-- Scratch Card Component -->
+      <div class="scratch-card-wrapper">
+        <div id="scratch-container" class="scratch-container">
+          
+          <!-- Underlying Hidden Content Revealed upon Scratching -->
+          <div id="scratch-revealed-content" class="scratch-revealed-content">
+            <p class="revealed-day">SATURDAY</p>
+            <h3 class="revealed-day-num">20</h3>
+            <p class="revealed-month-year">FEBRUARY · 2027</p>
+            <p class="revealed-location">Amarapur, Shevgaon, Maharashtra</p>
+          </div>
+
+          <!-- Gold Foil Scratch Canvas Overlay -->
+          <canvas id="scratch-canvas" class="scratch-canvas" aria-label="Scratch card to reveal the wedding date"></canvas>
+
+        </div>
+
+        <!-- Fallback Button for Accessibility & Instant Reveal -->
+        <button type="button" id="scratch-fallback-btn" class="scratch-reveal-btn">
+          Tap here to reveal instead
+        </button>
+      </div>
+    </section>
+
+    <!-- Live Auspicious Countdown Section -->
+    <section id="countdown-section" class="countdown-section reveal-on-scroll fade-up" aria-labelledby="countdown-heading">
+      <div class="countdown-card-inner">
+        <h2 id="countdown-heading" class="countdown-title">COUNTING DOWN</h2>
+        
+        <!-- Gold Diamond Divider -->
+        <div class="gold-diamond-divider" aria-hidden="true">
+          <span class="divider-line"></span>
+          <span class="divider-diamond">◆</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <!-- 4-Unit Grid (Zero-padded by js/main.js) -->
+        <div class="countdown-grid" role="timer" aria-live="polite">
+          <div class="countdown-cell">
+            <span id="days" class="countdown-digit">00</span>
+            <span class="countdown-label">Days</span>
+          </div>
+
+          <div class="countdown-colon" aria-hidden="true">:</div>
+
+          <div class="countdown-cell">
+            <span id="hours" class="countdown-digit">00</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+
+          <div class="countdown-colon" aria-hidden="true">:</div>
+
+          <div class="countdown-cell">
+            <span id="minutes" class="countdown-digit">00</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+
+          <div class="countdown-colon" aria-hidden="true">:</div>
+
+          <div class="countdown-cell">
+            <span id="seconds" class="countdown-digit">00</span>
+            <span class="countdown-label">Seconds</span>
+          </div>
+        </div>
+
+        <p id="countdown-message" class="countdown-message">Until Gaurav &amp; Dnyaneshwari begin their auspicious journey</p>
+      </div>
+    </section>
+
+    <!-- Ceremonies Itinerary Section (Only 4 Events: Haldi, Mehndi, Engagement, Marriage) -->
+    <section id="timeline-section" class="timeline-section reveal-on-scroll fade-up" aria-labelledby="timeline-heading">
+      <div class="timeline-header-group">
+        <h2 id="timeline-heading" class="section-heading-serif">ITINERARY</h2>
+        
+        <!-- Gold Diamond Divider -->
+        <div class="gold-diamond-divider" aria-hidden="true">
+          <span class="divider-line"></span>
+          <span class="divider-diamond">◆</span>
+          <span class="divider-line"></span>
+        </div>
+      </div>
+
+      <!-- Container where 4 dynamic event cards are rendered by js/main.js -->
+      <div id="events-list" class="events-list">
+        
+        <!-- 1. Haldi Card (Semantic fallback & SSR markup) -->
+        <article class="event-card reveal-on-scroll fade-up" data-event-index="0">
+          <div class="event-date-banner">FRIDAY, 19TH FEBRUARY 2027</div>
+          <h3 class="event-script-title">Haldi</h3>
+          <p class="event-time-banner">11:00 A.M. ONWARDS</p>
+          <div class="event-venue-block">
+            <p class="venue-name">Shree Lawns</p>
+            <p class="venue-address">Amarapur, Shevgaon, Maharashtra 414505</p>
+          </div>
+          <p class="event-dress-code">Dress: Shades of yellow</p>
+          <div class="event-action-pills">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Shree+Lawns%2C+Amarapur%2C+Shevgaon%2C+Maharashtra+414505" target="_blank" rel="noopener noreferrer" class="pill-btn pill-btn-dark">
+              <span class="btn-emoji" aria-hidden="true">📍</span> Directions
+            </a>
+            <button type="button" class="pill-btn pill-btn-outline btn-calendar" data-event-idx="0">
+              <span class="btn-emoji" aria-hidden="true">📅</span> Save date
+            </button>
+          </div>
+        </article>
+
+        <!-- 2. Mehndi Card -->
+        <article class="event-card reveal-on-scroll fade-up" data-event-index="1">
+          <div class="event-date-banner">FRIDAY, 19TH FEBRUARY 2027</div>
+          <h3 class="event-script-title">Mehndi</h3>
+          <p class="event-time-banner">04:00 P.M. ONWARDS</p>
+          <div class="event-venue-block">
+            <p class="venue-name">Shree Lawns</p>
+            <p class="venue-address">Amarapur, Shevgaon, Maharashtra 414505</p>
+          </div>
+          <p class="event-dress-code">Dress: Festive pastels</p>
+          <div class="event-action-pills">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Shree+Lawns%2C+Amarapur%2C+Shevgaon%2C+Maharashtra+414505" target="_blank" rel="noopener noreferrer" class="pill-btn pill-btn-dark">
+              <span class="btn-emoji" aria-hidden="true">📍</span> Directions
+            </a>
+            <button type="button" class="pill-btn pill-btn-outline btn-calendar" data-event-idx="1">
+              <span class="btn-emoji" aria-hidden="true">📅</span> Save date
+            </button>
+          </div>
+        </article>
+
+        <!-- 3. Engagement Card -->
+        <article class="event-card reveal-on-scroll fade-up" data-event-index="2">
+          <div class="event-date-banner">FRIDAY, 19TH FEBRUARY 2027</div>
+          <h3 class="event-script-title">Engagement</h3>
+          <p class="event-time-banner">07:30 P.M. ONWARDS</p>
+          <div class="event-venue-block">
+            <p class="venue-name">Shree Lawns</p>
+            <p class="venue-address">Amarapur, Shevgaon, Maharashtra 414505</p>
+          </div>
+          <p class="event-dress-code">Dress: Glamorous Evening Elegance</p>
+          <div class="event-action-pills">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Shree+Lawns%2C+Amarapur%2C+Shevgaon%2C+Maharashtra+414505" target="_blank" rel="noopener noreferrer" class="pill-btn pill-btn-dark">
+              <span class="btn-emoji" aria-hidden="true">📍</span> Directions
+            </a>
+            <button type="button" class="pill-btn pill-btn-outline btn-calendar" data-event-idx="2">
+              <span class="btn-emoji" aria-hidden="true">📅</span> Save date
+            </button>
+          </div>
+        </article>
+
+        <!-- 4. Marriage Card -->
+        <article class="event-card highlight-event-card reveal-on-scroll fade-up" data-event-index="3">
+          <div class="event-date-banner">SATURDAY, 20TH FEBRUARY 2027</div>
+          <h3 class="event-script-title">Marriage</h3>
+          <p class="event-time-banner">07:30 P.M. ONWARDS</p>
+          <div class="event-venue-block">
+            <p class="venue-name">Shree Lawns</p>
+            <p class="venue-address">Amarapur, Shevgaon, Maharashtra 414505</p>
+          </div>
+          <p class="event-dress-code">Dress: Royal Traditional Indian Attire</p>
+          <div class="event-action-pills">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Shree+Lawns%2C+Amarapur%2C+Shevgaon%2C+Maharashtra+414505" target="_blank" rel="noopener noreferrer" class="pill-btn pill-btn-dark">
+              <span class="btn-emoji" aria-hidden="true">📍</span> Directions
+            </a>
+            <button type="button" class="pill-btn pill-btn-outline btn-calendar" data-event-idx="3">
+              <span class="btn-emoji" aria-hidden="true">📅</span> Save date
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Polaroid Couple Photo Gallery Section ("BIG DAY") -->
+    <section id="gallery-section" class="gallery-section reveal-on-scroll fade-up" aria-labelledby="gallery-heading">
+      <div class="gallery-header-group">
+        <h2 id="gallery-heading" class="gallery-title">BIG DAY</h2>
+        
+        <!-- Gold Diamond Divider -->
+        <div class="gold-diamond-divider" aria-hidden="true">
+          <span class="divider-line"></span>
+          <span class="divider-diamond">◆</span>
+          <span class="divider-line"></span>
+        </div>
+      </div>
+
+      <!-- Polaroid Carousel / Slider Container with Next & Previous Controls -->
+      <div class="polaroid-carousel-wrap">
+        <button type="button" class="gallery-nav-btn prev-btn" id="gallery-prev-btn" aria-label="Previous photo">‹</button>
+        <button type="button" class="gallery-nav-btn next-btn" id="gallery-next-btn" aria-label="Next photo">›</button>
+
+        <div id="polaroid-carousel" class="polaroid-carousel">
+          <div id="polaroid-track" class="polaroid-track">
+            
+            <!-- Polaroid 1 -->
+            <div class="polaroid-item active" data-index="0">
+              <div class="polaroid-frame tilt-left">
+                <div class="polaroid-photo-box">
+                  <img src="assets1/couple-1.jpg" alt="Gaurav &amp; Dnyaneshwari shared joy" class="polaroid-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Polaroid 2 -->
+            <div class="polaroid-item" data-index="1">
+              <div class="polaroid-frame tilt-right">
+                <div class="polaroid-photo-box">
+                  <img src="assets1/couple-2.jpg" alt="Sacred union and mehndi blessings" class="polaroid-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Polaroid 3 -->
+            <div class="polaroid-item" data-index="2">
+              <div class="polaroid-frame tilt-left">
+                <div class="polaroid-photo-box">
+                  <img src="assets1/couple-3.jpg" alt="Royal wedding portrait" class="polaroid-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Dot Navigation Indicators -->
+        <div id="gallery-dots" class="gallery-dots" role="tablist" aria-label="Photo carousel navigation">
+          <button type="button" class="gallery-dot active" data-slide="0" aria-label="Slide 1"></button>
+          <button type="button" class="gallery-dot" data-slide="1" aria-label="Slide 2"></button>
+          <button type="button" class="gallery-dot" data-slide="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP & Warm Blessings Closing Section -->
+    <section id="closing-section" class="closing-section reveal-on-scroll fade-up" aria-labelledby="rsvp-heading">
+      <div class="closing-content-inner">
+        
+        <p class="rsvp-eyebrow">RSVP</p>
+        <h2 id="rsvp-heading" class="rsvp-title">WILL YOU JOIN US?</h2>
+        
+        <!-- Gold Diamond Divider -->
+        <div class="gold-diamond-divider" aria-hidden="true">
+          <span class="divider-line"></span>
+          <span class="divider-diamond">◆</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <p class="rsvp-reply-by">Kindly reply by 5 February 2027</p>
+
+        <!-- RSVP Family Contact Buttons -->
+        <div class="rsvp-contacts-grid">
+          <div class="contact-card">
+            <span class="contact-title">Groom's Family</span>
+            <strong class="contact-name">Mr. Kailas Jagtap</strong>
+            <a href="tel:+919876543210" class="btn-tel-pill" aria-label="Call Mr. Kailas Jagtap at +91 98765 43210">
+              <span class="tel-icon" aria-hidden="true">📞</span> +91 98765 43210
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-title">Bride's Family</span>
+            <strong class="contact-name">Mr. Tukaram Dhaktode</strong>
+            <a href="tel:+919876543211" class="btn-tel-pill" aria-label="Call Mr. Tukaram Dhaktode at +91 98765 43211">
+              <span class="tel-icon" aria-hidden="true">📞</span> +91 98765 43211
+            </a>
+          </div>
+        </div>
+
+        <!-- Gold Diamond Divider -->
+        <div class="gold-diamond-divider" aria-hidden="true">
+          <span class="divider-line"></span>
+          <span class="divider-diamond">◆</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <!-- Heartfelt Quote -->
+        <p class="blessing-quote">Your blessings will make our day complete.</p>
+
+        <!-- Couple Script Names -->
+        <p class="closing-script-names">Gaurav <span class="script-amp">&amp;</span> Dnyaneshwari</p>
+
+        <!-- Wedding Hashtag -->
+        <p class="wedding-hashtag">#GauravWedsDnyaneshwari</p>
+
+        <!-- Closing Blessing -->
+        <p class="crafted-brand">CRAFTED WITH LOVE FOR GAURAV &amp; DNYANESHWARI</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Application Scripts -->
+  <script src="js/wedding-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
