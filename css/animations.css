@@ -1,0 +1,267 @@
+/* ==========================================================================
+   Royal Indian Wedding Invitation - Gaurav & Dnyaneshwari
+   Theme: Luxury Animations & Micro-Interactions
+   File: css/animations.css
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Tap-to-Open Envelope Animations (#envelope-overlay & #envelope-flap)
+   -------------------------------------------------------------------------- */
+
+/* Envelope 3D Perspective Scene */
+.envelope-overlay {
+  perspective: 1200px;
+  will-change: opacity, transform, visibility;
+  transition: opacity 0.85s cubic-bezier(0.4, 0, 0.2, 1), 
+              visibility 0.85s ease;
+}
+
+.envelope-card-base {
+  transform-origin: center bottom;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.75s ease,
+              box-shadow 0.8s ease;
+}
+
+/* 3D Envelope Flap Flip */
+.envelope-flap {
+  transform-origin: top center;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Flap Opens up and backwards in 3D perspective */
+.envelope-flap.flap-open {
+  transform: rotateX(175deg);
+}
+
+/* When envelope is opened, overlay fades out after flap flips */
+#envelope-overlay.opened,
+.envelope-overlay.opened {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s, 
+              visibility 0.8s ease 0.4s;
+}
+
+#envelope-overlay.opened .envelope-card-base,
+.envelope-overlay.opened .envelope-card-base {
+  transform: scale(1.04) translateY(-32px);
+  opacity: 0;
+}
+
+/* --------------------------------------------------------------------------
+   2. Gold Wax Seal Button Breathing & Pulsing Halo (#seal-button)
+   -------------------------------------------------------------------------- */
+#seal-button,
+.seal-button {
+  position: relative;
+  animation: sealBreathing 3.4s ease-in-out infinite;
+}
+
+@keyframes sealBreathing {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 6px 16px rgba(83, 29, 40, 0.4));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 10px 24px rgba(212, 175, 55, 0.6));
+  }
+}
+
+/* Expanding Golden Halo Glow Ring */
+.seal-halo-glow {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-gold-bright, #D4AF37);
+  transform: scale(0.95);
+  pointer-events: none;
+  opacity: 0.85;
+  animation: haloPulse 2.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes haloPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.85;
+  }
+  60% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. Sound Equalizer Pill Bar Animations (#music-toggle)
+   -------------------------------------------------------------------------- */
+#music-toggle.is-playing,
+.music-equalizer-pill.is-playing {
+  animation: musicPillPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes musicPillPulse {
+  0%, 100% {
+    box-shadow: 0 4px 18px rgba(83, 29, 40, 0.2), 0 0 10px rgba(212, 175, 55, 0.25);
+  }
+  50% {
+    box-shadow: 0 4px 22px rgba(83, 29, 40, 0.32), 0 0 18px rgba(212, 175, 55, 0.65);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Scroll-Triggered Reveal Animations (.reveal-on-scroll)
+   -------------------------------------------------------------------------- */
+.reveal-on-scroll {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Fade Up Variant */
+.reveal-on-scroll.fade-up {
+  transform: translateY(32px);
+}
+
+/* Zoom In Variant */
+.reveal-on-scroll.zoom-in {
+  transform: scale(0.92) translateY(18px);
+}
+
+/* Visible State (applied by IntersectionObserver in js/main.js) */
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Sequential Stagger Delays */
+.delay-1 { transition-delay: 0.12s; }
+.delay-2 { transition-delay: 0.24s; }
+.delay-3 { transition-delay: 0.36s; }
+.delay-4 { transition-delay: 0.48s; }
+
+/* --------------------------------------------------------------------------
+   5. Card Container Reveal Animation
+   -------------------------------------------------------------------------- */
+#card-container {
+  transform-origin: center top;
+}
+
+body.envelope-opened #card-container,
+#card-container.is-revealed {
+  animation: cardRevealGrace 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes cardRevealGrace {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. Countdown Colon Blinking
+   -------------------------------------------------------------------------- */
+.countdown-colon {
+  animation: colonPulse 2s ease-in-out infinite;
+}
+
+@keyframes colonPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+/* --------------------------------------------------------------------------
+   7. Scratch Card Canvas Smooth Clearing Transition
+   -------------------------------------------------------------------------- */
+.scratch-canvas.revealed,
+#scratch-canvas.revealed {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+
+/* --------------------------------------------------------------------------
+   8. Button Interactive Ripples & Elevation
+   -------------------------------------------------------------------------- */
+.pill-btn,
+.btn-calendar,
+.btn-tel-pill,
+.scratch-reveal-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.pill-btn::after,
+.btn-calendar::after,
+.btn-tel-pill::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 60%);
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.4s ease-out;
+  pointer-events: none;
+}
+
+.pill-btn:hover::after,
+.btn-calendar:hover::after,
+.btn-tel-pill:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   9. Accessibility: Reduced Motion Media Query
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-on-scroll,
+  .reveal-on-scroll.fade-up,
+  .reveal-on-scroll.zoom-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  #envelope-overlay.opened {
+    display: none !important;
+  }
+
+  #card-container {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .seal-halo-glow,
+  .colonPulse,
+  #seal-button,
+  .scroll-prompt-pill {
+    animation: none !important;
+  }
+}
