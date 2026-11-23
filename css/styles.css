@@ -438,19 +438,27 @@ body.envelope-opened .scroll-prompt-pill {
 
 .envelope-couple-script {
   font-family: var(--font-script);
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   color: var(--color-wine);
-  line-height: 1.15;
-  margin: 6px 0 14px 0;
+  line-height: 1.05;
+  margin: 4px 0 10px 0;
   font-weight: 400;
-  transform: translateY(-48px);
+  transform: translateY(-24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.envelope-couple-script .name-line {
+  display: block;
 }
 
 .script-amp {
   font-family: var(--font-subheading);
-  font-size: 1.6rem;
+  font-size: 1.35rem;
   color: var(--color-gold);
-  vertical-align: middle;
+  line-height: 1;
+  margin: 2px 0;
 }
 
 /* 3D Flipping Envelope Flap */
