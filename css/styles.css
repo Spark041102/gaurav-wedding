@@ -443,6 +443,7 @@ body.envelope-opened .scroll-prompt-pill {
   line-height: 1.15;
   margin: 6px 0 14px 0;
   font-weight: 400;
+  transform: translateY(-48px);
 }
 
 .script-amp {
